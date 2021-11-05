@@ -23,6 +23,7 @@ function Form(props) {
         autoComplete="off"
         placeholder="Enter your todo item"
         value={name}
+        onChange={handleChange}
       />
       <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>
         Add
