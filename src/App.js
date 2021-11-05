@@ -22,6 +22,7 @@ const App = (props) => {
   const [text, setText] = useState('')
   const [items, setItems] = useState(getLocalStorage())
   const [tasks, setTasks] = useState(props.tasks);
+  const [filter, setFilter] = useState('All');
 
   function toggleTaskCompleted(id) {
     const updatedTasks = tasks.map(task => {
@@ -52,7 +53,6 @@ const App = (props) => {
     });
     setTasks(editedTaskList);
   }
-  
 
   function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
