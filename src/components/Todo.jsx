@@ -8,7 +8,7 @@ function Todo(props) {
                 defaultChecked={props.completed} 
                 onChange={() => props.toggleTaskCompleted(props.id)}
                 />
-                
+
                 <label className="todo-label" htmlFor={props.id}>
                     {props.name}
                 </label>
@@ -16,11 +16,14 @@ function Todo(props) {
             <div className="btn-group">
             <button type="button" className="btn">
                 Edit
-                 <span className="visually-hidden"></span>
+                 
             </button>
-            <button type="button" className="btn btn__danger">
+            <button 
+            type="button" 
+            className="btn btn__danger" 
+            onClick={() => props.deleteTask(props.id)}>
                 Delete
-                 <span className="visually-hidden"></span>
+                 
             </button>
             </div>
         </li>
