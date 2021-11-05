@@ -10,7 +10,8 @@ import { v4 as uuidv4 } from "uuid"
 const [tasks, setTasks] = useState(props.tasks);
 
 function addTask(name) {
-  alert(name)
+  const newTask = { id: "id", name: name, completed: false };
+  setTasks([...tasks, newTask]);
 }
 
 const getLocalStorage = () => {
@@ -49,7 +50,7 @@ const App = (props) => {
     localStorage.setItem("items", JSON.stringify(items))
   }, [items])
 
-  const taskList = tasks.map(task => (
+  const taskList = props.tasks.map(task => (
     <Todo 
       id={task.id} 
       name={task.name} 
