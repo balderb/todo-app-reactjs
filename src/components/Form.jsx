@@ -1,7 +1,4 @@
-import React from "react";
-
 import React, { useState } from "react";
-
 
 function handleSubmit(e) {
     e.preventDefault();
