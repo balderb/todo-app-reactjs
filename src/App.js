@@ -6,6 +6,7 @@ import Todo from './components/Todo'
 import Form from './components/Form.jsx'
 import FilterButton from './components/FilterButton';
 import { v4 as uuidv4 } from "uuid"
+import { nanoid } from "nanoid";
 
 
 const getLocalStorage = () => {
