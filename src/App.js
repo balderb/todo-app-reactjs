@@ -64,6 +64,8 @@ const App = (props) => {
 
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
 
+        { /* mdn docs */ }  
+
         <div className="text-lg font-bold pt-5">MDN docs helpsheet from here</div>
 
         <Form/>
