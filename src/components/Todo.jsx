@@ -37,22 +37,24 @@ function Todo(props) {
               </label>
             </div>
             <div className="btn-group">
-              <button type="button" className="btn">
-              </button>
-              <button
+            <button type="button" className="btn" onClick={() => setEditing(true)}>
+                Edit
+            </button>
+
+            <button
                 type="button"
-                className="btn btn__danger"
-                onClick={() => props.deleteTask(props.id)}
-              >
-                Delete
-              </button>
+                className="btn todo-cancel"
+                onClick={() => setEditing(false)}
+                >
+                Cancel
+            </button>
+
             </div>
         </div>
       );      
 
-      return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>; (
-        
-    );
+    return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
+    
 }
 
 export default Todo
