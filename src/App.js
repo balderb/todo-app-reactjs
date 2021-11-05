@@ -23,6 +23,10 @@ const App = (props) => {
   const [items, setItems] = useState(getLocalStorage())
   const [tasks, setTasks] = useState(props.tasks);
 
+  function toggleTaskCompleted(id) {
+    console.log(tasks[0])
+  }  
+
   function addTask(name) {
     const newTask = { id: uuidv4(), name: name, completed: false };
     setTasks([...tasks, newTask]);
@@ -55,7 +59,8 @@ const App = (props) => {
       id={task.id} 
       name={task.name} 
       completed={task.completed} 
-      key={task.id} 
+      key={task.id}
+      toggleTaskCompleted={toggleTaskCompleted}
       />
     )
   );
@@ -75,7 +80,6 @@ const App = (props) => {
           >
           </input>
         </form>
-       
 
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
 
