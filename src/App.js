@@ -37,8 +37,10 @@ const App = (props) => {
   }
   
   function deleteTask(id) {
-    console.log(id)
+    const remainingTasks = tasks.filter(task => id !== task.id);
+    setTasks(remainingTasks);
   }
+  
   
   function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
@@ -95,7 +97,7 @@ const App = (props) => {
           </input>
         </form>
 
-        <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
+        <List completed={false} items={items} deleteItem={deleteItem}/>
 
         { /* mdn docs */ }  
 

@@ -2,8 +2,7 @@ function Todo(props) {
     return (
         <li className="todo stack-small">
             <div className="c-cb">
-                <input 
-                id="todo-0" 
+                <input
                 type="checkbox" 
                 defaultChecked={props.completed} 
                 onChange={() => props.toggleTaskCompleted(props.id)}
