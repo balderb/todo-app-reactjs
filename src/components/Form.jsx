@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+function handleChange(e) {
+    console.log("Typing!");
+}
+
 function handleSubmit(e) {
     e.preventDefault();
     this.props.addTask("Say Hello");
