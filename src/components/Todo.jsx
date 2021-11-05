@@ -7,7 +7,15 @@ function Todo(props) {
 
     function handleChange(e) {
         setNewName(e.target.value);
-      }      
+      }
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        props.editTask(props.id, newName);
+        setNewName("");
+        setEditing(false);
+      }
+      
 
     const editingTemplate = (
         <form className="stack-small">
@@ -16,7 +24,7 @@ function Todo(props) {
               New name for {props.name}
             </label>
             <input id={props.id} className="todo-text" type="text" value={newName}
-  onChange={handleChange} />
+            onChange={handleChange} />
           </div>
           <div className="btn-group">
             <button type="button" className="btn todo-cancel">
