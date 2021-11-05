@@ -11,7 +11,8 @@ function Form(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        this.props.addTask("Say Hello");
+        props.addTask(name);
+        setName("");
     }
 
   return (
