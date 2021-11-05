@@ -59,7 +59,6 @@ const App = (props) => {
 
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
         <ul> { taskList } </ul>
-
       </main>
     </>
   );
