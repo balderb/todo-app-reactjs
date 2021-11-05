@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Hero from "./components/Hero"
 import Logo from "./components/Logo"
 import List from "./components/List"
+import Todo from './components/Todo';
 
 import { v4 as uuidv4 } from "uuid"
 
