@@ -8,7 +8,6 @@ import FilterButton from './components/FilterButton';
 import { v4 as uuidv4 } from "uuid"
 import { nanoid } from "nanoid";
 
-
 const getLocalStorage = () => {
   let items = localStorage.getItem("items")
 
@@ -29,7 +28,7 @@ const App = (props) => {
   }  
 
   function addTask(name) {
-    const newTask = { id: "todo-" +nanoid(), name: name, completed: false };
+    const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
   }
 
@@ -104,4 +103,3 @@ const App = (props) => {
 }
 
 export default App;
-
