@@ -24,6 +24,8 @@ const FILTER_MAP = {
   Completed: task => task.completed
 };
 
+const FILTER_NAMES = Object.keys(FILTER_MAP);
+
 
 const App = (props) => {
   const [text, setText] = useState('')
@@ -101,6 +103,15 @@ const App = (props) => {
     )
   );
 
+  const filterList = FILTER_NAMES.map(name => (
+    <FilterButton
+      key={name}
+      name={name}
+      isPressed={name === filter}
+      setFilter={setFilter}
+    />
+  ));
+  
   const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
   const headingText = `${taskList.length} ${tasksNoun} remaining`;
 
@@ -125,9 +136,7 @@ const App = (props) => {
           <h1>TodoMatic</h1>
           <Form addTask={addTask} />
           <div className="filters btn-group stack-exceptions">
-            <FilterButton/>
-            <FilterButton/>
-            <FilterButton/>
+            {filterList}
           </div>
           <h2 id="list-heading">{headingText}</h2>
         <ul>
