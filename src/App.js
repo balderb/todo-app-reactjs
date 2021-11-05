@@ -71,7 +71,7 @@ const App = (props) => {
 
         <div className="text-lg font-bold pt-5">MDN docs helpsheet from here</div>
           <h1>TodoMatic</h1>
-          <Form/>
+          <Form addTask={addTask} />
           <div className="filters btn-group stack-exceptions">
             <FilterButton/>
             <FilterButton/>
