@@ -5,8 +5,11 @@ import List from "./components/List"
 import Todo from './components/Todo'
 import Form from './components/Form.jsx'
 import FilterButton from './components/FilterButton';
-
 import { v4 as uuidv4 } from "uuid"
+
+function addTask(name) {
+  alert(name)
+}
 
 const getLocalStorage = () => {
   let items = localStorage.getItem("items")
