@@ -1,10 +1,14 @@
-import React, { useState } from "react";
 import React from "react";
+
+import React, { useState } from "react";
+
 
 function handleSubmit(e) {
     e.preventDefault();
     this.props.addTask("Say Hello");
 }
+
+const [name, setName] = useState('Use hooks!');
 
 function Form(props) {
   return (
@@ -21,6 +25,7 @@ function Form(props) {
         name="text"
         autoComplete="off"
         placeholder="Enter your todo item"
+        value={name}
       />
       <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>
         Add
