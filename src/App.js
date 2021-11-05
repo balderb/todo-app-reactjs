@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import Hero from "./components/Hero"
 import Logo from "./components/Logo"
 import List from "./components/List"
-import Todo from './components/Todo';
+import Todo from './components/Todo'
+import Form from './components/Form.jsx'
 
 import { v4 as uuidv4 } from "uuid"
 
@@ -51,7 +52,6 @@ const App = (props) => {
       <main>
         <Logo/>
         <Hero/>
-  
         <form className="flex items-center justify-center mt-10" onSubmit={ handleSubmit }>
           <input className="py-2 px-5 rounded-lg" type="text" name="text" placeholder="Enter your todo item" autoComplete="off"
           value= { text }
@@ -59,8 +59,13 @@ const App = (props) => {
           >
           </input>
         </form>
+       
 
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
+
+        <div className="text-lg font-bold pt-5">MDN docs helpsheet from here</div>
+
+        <Form/>
 
         <ul>
           { taskList }
