@@ -2,7 +2,7 @@ import React from "react";
 
 function handleSubmit(e) {
     e.preventDefault();
-    alert('Hello world');
+    addTask("Say Hello")
 }
 
 function Form(props) {
