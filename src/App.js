@@ -136,11 +136,15 @@ const App = (props) => {
         <div className="bg-gray-200">
         <div className="text-lg font-bold pt-5 text-center text-white">TODO</div>
           <Form addTask={addTask} />
-          <h2 id="list-heading">{headingText}</h2>
+          
         <ul>
           { taskList }
         </ul>
-        <div>{filterList}</div>
+        <div className="flex">
+          <h2 id="list-heading">{headingText}</h2>
+          <div>{filterList}</div>
+          <h2>clear completed</h2>
+        </div>
         </div>
       </main>
     </>
