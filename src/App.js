@@ -130,21 +130,19 @@ const App = (props) => {
         <List completed={false} items={items} deleteItem={deleteItem}/>
 
         { /* mdn docs */ }
-
-        <Logo/>
-        <Hero/>
-        <div className="bg-gray-200">
+        
         <div className="text-lg font-bold pt-5 text-center text-white">TODO</div>
           <Form addTask={addTask} />
-          
-        <ul>
-          { taskList }
-        </ul>
-        <div className="flex">
-          <h2 id="list-heading">{headingText}</h2>
-          <div>{filterList}</div>
-          <h2>clear completed</h2>
-        </div>
+        
+        <div className="bg-gray-200 mx-10 p-5 rounded-lg mt-8 mt-10 max-w-md mx-auto sm:max-w-2xl">
+          <ul>
+            { taskList }
+          </ul>
+          <div className="flex justify-between border-top-width: 2px;">
+            <h2 id="list-heading">{headingText}</h2>
+            <div>{filterList}</div>
+            <h2 className="">Clear Completed</h2>
+          </div>
         </div>
       </main>
     </>

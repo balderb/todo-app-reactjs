@@ -17,19 +17,19 @@ function Todo(props) {
       }
 
     const editingTemplate = (
-        <form className="stack-small" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label className="todo-label" htmlFor={props.id}>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor={props.id}>
               New name for {props.name}
             </label>
-            <input id={props.id} className="todo-text" type="text" value={newName}
+            <input id={props.id} type="text" value={newName}
             onChange={handleChange} />
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn todo-cancel">
+          <div>
+            <button type="button">
               Cancel
             </button>
-            <button type="submit" className="btn btn__primary todo-edit">
+            <button type="submit">
               Save
             </button>
           </div>
@@ -37,34 +37,34 @@ function Todo(props) {
       );
       
       const viewTemplate = (
-        <div className="stack-small">
-          <div className="c-cb">
+        <div>
+          <div className="flex justify-between">
               <input
                 id={props.id}
                 type="checkbox"
                 defaultChecked={props.completed}
                 onChange={() => props.toggleTaskCompleted(props.id)}
               />
-              <label className="todo-label" htmlFor={props.id}>
+              <label htmlFor={props.id}>
                 {props.name}
               </label>
-            </div>
-            <div className="btn-group">
-              <button type="button" className="btn">
+            
+            <div>
+              <button type="button" className="px-2">
                 Edit
               </button>
               <button
                 type="button"
-                className="btn btn__danger"
                 onClick={() => props.deleteTask(props.id)}
               >
                 Delete 
               </button>
             </div>
+            </div>
         </div>
       );    
 
-    return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
+    return <li>{isEditing ? editingTemplate : viewTemplate}</li>;
 }
 
 export default Todo
