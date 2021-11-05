@@ -59,9 +59,9 @@ const App = (props) => {
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
 
         <ul>
-          <Todo name="Here we test props" completed={true}/>
-          <Todo name="Sleep" completed={false}/>
-          <Todo name="Repeat" completed={false}/>
+          <Todo name="Here we test props" completed={false} id="todo-0"/>
+          <Todo name="Sleep" completed={false} id="todo-1"/>
+          <Todo name="Repeat" completed={false} id="todo-2"/>
         </ul>
 
       </main>
