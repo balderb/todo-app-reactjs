@@ -15,7 +15,6 @@ function Todo(props) {
         setNewName("");
         setEditing(false);
       }
-      
 
     const editingTemplate = (
         <form className="stack-small" onSubmit={handleSubmit}>
@@ -51,21 +50,19 @@ function Todo(props) {
               </label>
             </div>
             <div className="btn-group">
-            <button type="button" className="btn" onClick={() => setEditing(true)}>
+              <button type="button" className="btn">
                 Edit
-            </button>
-
-            <button
+              </button>
+              <button
                 type="button"
-                className="btn todo-cancel"
-                onClick={() => setEditing(false)}
-                >
-                Cancel
-            </button>
-
+                className="btn btn__danger"
+                onClick={() => props.deleteTask(props.id)}
+              >
+                Delete 
+              </button>
             </div>
         </div>
-      );      
+      );    
 
     return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
     
