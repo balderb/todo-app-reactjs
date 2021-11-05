@@ -65,7 +65,6 @@ function Todo(props) {
       );    
 
     return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
-    
 }
 
 export default Todo

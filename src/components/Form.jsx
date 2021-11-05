@@ -16,11 +16,6 @@ function Form(props) {
 
   return (
     <form>
-        <h2 className="label-wrapper">
-            <label htmlFor="new-todo-input" className="label__lg">
-            What needs to be done?
-            </label>
-        </h2>
         <input
             type="text"
             id="new-todo-input"
@@ -30,8 +25,9 @@ function Form(props) {
             placeholder="Enter your todo item"
             value={name}
             onChange={handleChange}
+            className=""
         />
-        <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>
+        <button type="submit" className="invisible" onClick={handleSubmit}>
         Add
         </button>
     </form>

@@ -132,8 +132,7 @@ const App = (props) => {
 
         { /* mdn docs */ }  
 
-        <div className="text-lg font-bold pt-5">MDN docs helpsheet from here</div>
-          <h1>TodoMatic</h1>
+        <div className="text-lg font-bold pt-5 text-center">TODO</div>
           <Form addTask={addTask} />
           <div className="filters btn-group stack-exceptions">
             {filterList}
