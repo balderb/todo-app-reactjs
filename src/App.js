@@ -7,12 +7,6 @@ import Form from './components/Form.jsx'
 import FilterButton from './components/FilterButton';
 import { v4 as uuidv4 } from "uuid"
 
-const [tasks, setTasks] = useState(props.tasks);
-
-function addTask(name) {
-  const newTask = { id: "id", name: name, completed: false };
-  setTasks([...tasks, newTask]);
-}
 
 const getLocalStorage = () => {
   let items = localStorage.getItem("items")
@@ -27,6 +21,12 @@ const getLocalStorage = () => {
 const App = (props) => {
   const [text, setText] = useState('')
   const [items, setItems] = useState(getLocalStorage())
+  const [tasks, setTasks] = useState(props.tasks);
+
+  function addTask(name) {
+    const newTask = { id: "id", name: name, completed: false };
+    setTasks([...tasks, newTask]);
+  }
 
   // define the custom handleSubmit here further, on this location
   const handleSubmit = (e) => {
@@ -50,14 +50,15 @@ const App = (props) => {
     localStorage.setItem("items", JSON.stringify(items))
   }, [items])
 
-  const taskList = props.tasks.map(task => (
+  const taskList = tasks.map(task => (
     <Todo 
       id={task.id} 
       name={task.name} 
       completed={task.completed} 
       key={task.id} 
       />
-    ));
+    )
+  );
 
   return (
     <>
