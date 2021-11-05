@@ -59,9 +59,9 @@ const App = (props) => {
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
 
         <ul>
-          <Todo />
-          <Todo />
-          <Todo />
+          <Todo name="Eat"/>
+          <Todo name="Sleep"/>
+          <Todo name="Repeat"/>
         </ul>
 
       </main>

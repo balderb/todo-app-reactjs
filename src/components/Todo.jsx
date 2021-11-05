@@ -9,10 +9,10 @@ function Todo() {
             </div>
             <div className="btn-group">
             <button type="button" className="btn">
-                Edit <span className="visually-hidden">Eat</span>
+                 <span className="visually-hidden">Edit</span>
             </button>
             <button type="button" className="btn btn__danger">
-                Delete <span className="visually-hidden">Eat</span>
+                 <span className="visually-hidden">Delete</span>
             </button>
             </div>
         </li>
