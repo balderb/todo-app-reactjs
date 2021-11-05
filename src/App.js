@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Hero from "./components/Hero"
 import Logo from "./components/Logo"
 import List from "./components/List"
+import Todo from "./components/Todo";
 
 import { v4 as uuidv4 } from "uuid"
 
@@ -41,8 +42,6 @@ const App = (props) => {
     localStorage.setItem("items", JSON.stringify(items))
   }, [items])
 
-  const taskList = props.tasks.map(task => task.name);
-
   return (
     <>
       <main>
@@ -58,7 +57,13 @@ const App = (props) => {
         </form>
 
         <List completed={false} items={items} deleteItem={deleteItem} id="todo-0"/>
-        <ul> { taskList } </ul>
+
+        <ul>
+          <Todo />
+          <Todo />
+          <Todo />
+        </ul>
+
       </main>
     </>
   );
