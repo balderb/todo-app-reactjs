@@ -67,15 +67,17 @@ const App = (props) => {
         { /* mdn docs */ }  
 
         <div className="text-lg font-bold pt-5">MDN docs helpsheet from here</div>
-
-        <Form/>
-
+          <h1>TodoMatic</h1>
+          <Form/>
+          <div className="filters btn-group stack-exceptions">
+            <FilterButton/>
+            <FilterButton/>
+            <FilterButton/>
+          </div>
+          <h2 id="list-heading">3 tasks remaining</h2>
         <ul>
           { taskList }
         </ul>
-
-        <FilterButton/>
-
       </main>
     </>
   );
