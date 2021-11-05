@@ -21,7 +21,7 @@ function Form(props) {
         autoComplete="off"
         placeholder="Enter your todo item"
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>
         Add
       </button>
     </form>
