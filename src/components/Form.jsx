@@ -1,5 +1,10 @@
 import React from "react";
 
+function handleSubmit(e) {
+    e.preventDefault();
+    alert('Hello world');
+}
+
 function Form(props) {
   return (
     <form>
@@ -16,7 +21,7 @@ function Form(props) {
         autoComplete="off"
         placeholder="Enter your todo item"
       />
-      <button type="submit" className="btn btn__primary btn__lg" onClick={() => alert("hi")}>
+      <button type="submit" className="btn btn__primary btn__lg">
         Add
       </button>
     </form>
