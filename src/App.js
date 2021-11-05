@@ -4,6 +4,7 @@ import Logo from "./components/Logo"
 import List from "./components/List"
 import Todo from './components/Todo'
 import Form from './components/Form.jsx'
+import FilterButton from './components/FilterButton';
 
 import { v4 as uuidv4 } from "uuid"
 
@@ -70,6 +71,8 @@ const App = (props) => {
         <ul>
           { taskList }
         </ul>
+
+        <FilterButton/>
 
       </main>
     </>
