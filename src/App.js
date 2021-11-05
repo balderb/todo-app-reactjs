@@ -42,7 +42,9 @@ const App = (props) => {
     localStorage.setItem("items", JSON.stringify(items))
   }, [items])
 
-  const taskList = props.tasks.map(task => <Todo/>);
+  const taskList = props.tasks.map(task => (
+    <Todo id={task.id} name={task.name} completed={task.completed} />
+    ));
 
   return (
     <>
