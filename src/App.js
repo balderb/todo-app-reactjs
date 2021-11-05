@@ -18,6 +18,13 @@ const getLocalStorage = () => {
   }
 }
 
+const FILTER_MAP = {
+  All: () => true,
+  Active: task => !task.completed,
+  Completed: task => task.completed
+};
+
+
 const App = (props) => {
   const [text, setText] = useState('')
   const [items, setItems] = useState(getLocalStorage())
