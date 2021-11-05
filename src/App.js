@@ -26,7 +26,6 @@ const FILTER_MAP = {
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-
 const App = (props) => {
   const [text, setText] = useState('')
   const [items, setItems] = useState(getLocalStorage())
@@ -132,6 +131,9 @@ const App = (props) => {
 
         { /* mdn docs */ }  
 
+        <Logo/>
+        <Hero/>
+        <div className="bg-gray-200">
         <div className="text-lg font-bold pt-5 text-center">TODO</div>
           <Form addTask={addTask} />
           <div className="filters btn-group stack-exceptions">
@@ -141,6 +143,7 @@ const App = (props) => {
         <ul>
           { taskList }
         </ul>
+        </div>
       </main>
     </>
   );
