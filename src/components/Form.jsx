@@ -25,7 +25,7 @@ function Form(props) {
             placeholder="Enter your todo item"
             value={name}
             onChange={handleChange}
-            className=""
+            className="py-2 px-5 rounded-lg"
         />
         <button type="submit" className="invisible" onClick={handleSubmit}>
         Add
