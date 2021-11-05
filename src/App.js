@@ -7,6 +7,8 @@ import Form from './components/Form.jsx'
 import FilterButton from './components/FilterButton';
 import { v4 as uuidv4 } from "uuid"
 
+const [tasks, setTasks] = useState(props.tasks);
+
 function addTask(name) {
   alert(name)
 }
