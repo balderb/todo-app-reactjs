@@ -24,7 +24,7 @@ const App = (props) => {
   const [tasks, setTasks] = useState(props.tasks);
 
   function addTask(name) {
-    const newTask = { id: "id", name: name, completed: false };
+    const newTask = { id: uuidv4(), name: name, completed: false };
     setTasks([...tasks, newTask]);
   }
 
