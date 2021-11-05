@@ -129,20 +129,18 @@ const App = (props) => {
 
         <List completed={false} items={items} deleteItem={deleteItem}/>
 
-        { /* mdn docs */ }  
+        { /* mdn docs */ }
 
         <Logo/>
         <Hero/>
         <div className="bg-gray-200">
-        <div className="text-lg font-bold pt-5 text-center">TODO</div>
+        <div className="text-lg font-bold pt-5 text-center text-white">TODO</div>
           <Form addTask={addTask} />
-          <div className="filters btn-group stack-exceptions">
-            {filterList}
-          </div>
           <h2 id="list-heading">{headingText}</h2>
         <ul>
           { taskList }
         </ul>
+        <div>{filterList}</div>
         </div>
       </main>
     </>

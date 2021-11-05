@@ -15,7 +15,7 @@ function Form(props) {
     }
 
   return (
-    <form className="flex items-center justify-center mt-10 rounded">
+    <form className="flex items-center justify-center mt-10 rounded ring-offset-4 ring-offset-blue-200">
         <input
             type="text"
             id="new-todo-input"
