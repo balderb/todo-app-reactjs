@@ -3,7 +3,12 @@ import React, { useState } from "react";
 function Todo(props) {
     
     const [isEditing, setEditing] = useState(false);
-    
+    const [newName, setNewName] = useState('');
+
+    function handleChange(e) {
+        setNewName(e.target.value);
+      }      
+
     const editingTemplate = (
         <form className="stack-small">
           <div className="form-group">
