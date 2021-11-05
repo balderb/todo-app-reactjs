@@ -1,37 +1,39 @@
 import React, { useState } from "react";
 
-function handleChange(e) {
-    console.log("Typing!");
-}
-
-function handleSubmit(e) {
-    e.preventDefault();
-    this.props.addTask("Say Hello");
-}
-
-const [name, setName] = useState('Use hooks!');
-
 function Form(props) {
+
+    const [name, setName] = useState('');
+
+    function handleChange(e) {
+    console.log("e.target.value!");
+    setName("e.target.value!");
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        this.props.addTask("Say Hello");
+    }
+
   return (
     <form>
-      <h2 className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
-        </label>
-      </h2>
-      <input
-        type="text"
-        id="new-todo-input"
-        className="input input__lg"
-        name="text"
-        autoComplete="off"
-        placeholder="Enter your todo item"
-        value={name}
-        onChange={handleChange}
-      />
-      <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>
+        <h2 className="label-wrapper">
+            <label htmlFor="new-todo-input" className="label__lg">
+            What needs to be done?
+            </label>
+        </h2>
+        <input
+            type="text"
+            id="new-todo-input"
+            className="input input__lg"
+            name="text"
+            autoComplete="off"
+            placeholder="Enter your todo item"
+            value={name}
+            onChange={handleChange}
+        />
+        <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>
         Add
-      </button>
+        </button>
     </form>
   );
 }
